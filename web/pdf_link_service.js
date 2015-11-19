@@ -181,10 +181,6 @@ var PDFLinkService = (function () {
           this.navigateTo(params.nameddest);
           return;
         }
-
-        // Added by Jorge Antón Caballero <jorgeac89@gmail.com>
-        // 18/11/2015
-        // START bookmark_param_section
         if ('bookmark' in params) {
           // PDFViewerApplication.pdfDocument.getOutline().then(function(outline, bookmark) {
           this.pdfDocument.getOutline().then(function(outline, bookmark) {
@@ -198,8 +194,6 @@ var PDFLinkService = (function () {
             });
           });
         }
-        // END bookmark_param_section
-        
         var pageNumber, dest;
         if ('page' in params) {
           pageNumber = (params.page | 0) || 1;
