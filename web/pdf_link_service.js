@@ -182,7 +182,6 @@ var PDFLinkService = (function () {
           return;
         }
         if ('bookmark' in params) {
-          // PDFViewerApplication.pdfDocument.getOutline().then(function(outline, bookmark) {
           this.pdfDocument.getOutline().then(function(outline, bookmark) {
             outline.forEach(function(element, index, array){
               if(element.title === params.bookmark){
